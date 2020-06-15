@@ -73,15 +73,15 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
    mkdir -p data/kafka  <br />
 
 2. Update the server.properties file in each instance accordingly: <br />
-   vim config/server.properties <br />  <br />
+   vim config/server.properties <br />  
    
    broker.id=10 # should be unique for every instance, ex: 20 for instance 2, 30 for instance 3, etc. <br />
    advertised.listeners=PLAINTEXT://ec2-.-..-...-....us-east-2.compute.amazonaws.com:9092 <br />
    log.dirs=/home/ubuntu/kafka_2.12-2.5.0/data/kafka <br />
-   zookeeper.connect=ip_of_instance_1:2181,ip_of_instance_2:2181,ip_of_instance_3:2181 # AWS IPv4 Public IP <br />  <br />
+   zookeeper.connect=ip_of_instance_1:2181,ip_of_instance_2:2181,ip_of_instance_3:2181 # AWS IPv4 Public IP  <br />
    
 3. While in the kafka folder, run kafka broker as a background process using the following command: <br />
-   nohup bin/kafka-server-start.sh config/server.properties & <br />  <br />
+   nohup bin/kafka-server-start.sh config/server.properties & <br /> 
    
 ## Create and manage Kafka topics
 1. To create a kafka topic enter the following command. Note that any records sent to the topic will be partitioned into 3 pieces and each piece will be stored on all three brokers.  <br />
@@ -93,16 +93,24 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
    
 3. Command to describe topic:  <br />
    bin/kafka-topics.sh --describe  --bootstrap-server localhost:9092 --topic demo-topic <br />
+   
+   ![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/security-groups.png "")
 
 ## Create custom producer class 
 1. Refer to the code as a template. The custom producer class allows us to send records in more complex formats such as JSON rather than just simple String objects.  <br />
 
-2. Command for standard producer:  <br />
+2. If using above template, after changing KafkaConfiguration to point to the proper kafka broker and port, run the project locally and send request. See below for example using Postman
+
+![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/security-groups.png "")
+   
+3. Command for standard producer:  <br />
    sudo bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic test <br />
 
 ## Run consumer to consume data sent by producer class
 1. Enter the following command to start consumer. It will read in all records for given topic:  <br />
    sudo bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning <br />
+   
+   ![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/security-groups.png "")
    
 ## Overview
 
