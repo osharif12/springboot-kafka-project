@@ -119,3 +119,4 @@ https://kafka.apache.org/quickstart <br />
 https://codeforgeek.com/how-to-setup-zookeeper-cluster-for-kafka/ <br />
 https://codeforgeek.com/how-to-setup-multi-node-multi-broker-kafka-cluster-in-aws/ <br />
 https://medium.com/@Dmytro_Pryimak/how-to-set-up-multi-broker-kafka-cluster-on-aws-ec2-c19c3bb557c <br />
+https://rmoff.net/2018/08/02/kafka-listeners-explained/ <br />
