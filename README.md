@@ -5,9 +5,14 @@ A project which demonstrates the basics of Apache Kafka. Will demonstrate how to
 You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper node to manage the cluster and a Kafka broker to handle producers and consumers.
 
 ### Steps
-1. Create an AWS account and launch three EC2 instances. The AMI for each instance should be Linux Ubuntu Server(16.04 LTS or above), instance type should be t2.medium, and security groups should be configured accordingly for each instance. 
+1. Create an AWS account and launch three EC2 instances. The AMI for each instance should be Linux Ubuntu Server(16.04 LTS or above), instance type should be t2.medium, and security groups should be configured accordingly for each instance. See image below (note that category "source" should not be from anywhere for best practices and should be restricted to trusted machines) 
+
 ![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/security-groups.png "")
-2. 
+
+2. Download the .pem file and launch the instance. Once launched you should be able to ssh into your instance using following commands: 
+
+chmod 400 name-of-pem.pem
+ssh -i "name-of-pem.pem" ubuntu@ec2-**-***-***-**.us-east-2.compute.amazonaws.com
 
 ## Download proper binaries on each instance
 
