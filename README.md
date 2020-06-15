@@ -84,7 +84,7 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
    nohup bin/kafka-server-start.sh config/server.properties & <br /> 
    
 ## Create and manage Kafka topics
-1. To create a kafka topic enter the following command. Note that any records sent to the topic will be partitioned into 3 pieces and each piece will be stored on all three brokers.  <br />
+1. To create a kafka topic enter the following command. Note that in this example, any records sent to the topic will be partitioned into 3 pieces and each piece will be stored on all three brokers. However you can modify your replication-factor and partitions differently. <br />
 
    bin/kafka-topics.sh --create  --bootstrap-server localhost:9092 --replication-factor 3 --partitions 3 --topic demo-topic <br />
 
@@ -99,7 +99,7 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
 ## Create custom producer class 
 1. Refer to the code as a template. The custom producer class allows us to send records in more complex formats such as JSON rather than just simple String objects.  <br />
 
-2. If using above template, after changing KafkaConfiguration to point to the proper kafka broker and port, run the project locally and send request. See below for example using Postman
+2. If using above template, after changing KafkaConfiguration to point to your kafka broker and port, run the project locally and send the POST request. See below for example using Postman: 
 
 ![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/postman.png "")
    
@@ -113,7 +113,7 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
    ![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/consumer.png "")
    
 ## Overview
-You have now set up your own Kafka cluster. Below are links for further reference <br />
+You have now set up your own Kafka cluster. Below are links for further reference: <br />
 
 https://kafka.apache.org/quickstart <br />
 https://codeforgeek.com/how-to-setup-zookeeper-cluster-for-kafka/ <br />
