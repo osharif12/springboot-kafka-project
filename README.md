@@ -94,14 +94,14 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
 3. Command to describe topic:  <br />
    bin/kafka-topics.sh --describe  --bootstrap-server localhost:9092 --topic demo-topic <br />
    
-   ![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/security-groups.png "")
+   ![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/topic-info.png "")
 
 ## Create custom producer class 
 1. Refer to the code as a template. The custom producer class allows us to send records in more complex formats such as JSON rather than just simple String objects.  <br />
 
 2. If using above template, after changing KafkaConfiguration to point to the proper kafka broker and port, run the project locally and send request. See below for example using Postman
 
-![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/security-groups.png "")
+![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/postman.png "")
    
 3. Command for standard producer:  <br />
    sudo bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic test <br />
@@ -110,7 +110,7 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
 1. Enter the following command to start consumer. It will read in all records for given topic:  <br />
    sudo bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning <br />
    
-   ![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/security-groups.png "")
+   ![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/consumer.png "")
    
 ## Overview
 
