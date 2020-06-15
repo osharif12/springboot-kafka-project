@@ -12,13 +12,18 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
 2. Download the .pem file and launch the instance. Once launched you should be able to ssh into your instance using following commands: 
 
 chmod 400 name-of-pem.pem  <br />
-ssh -i "name-of-pem.pem" ubuntu@ec2-!!-!!!-!!!-!!.us-east-2.compute.amazonaws.com
+ssh -i "name-of-pem.pem" ubuntu@ec2-..-...-...-..us-east-2.compute.amazonaws.com
 
-## Download proper binaries on each instance
+## Download proper packages and Kafka on each instance
+1. sudo apt-get update
+2. wget http://apache.mirrors.hoobly.com/kafka/2.5.0/kafka_2.12-2.5.0.tgz
+3. tar xzf kafka_2.12-2.5.0.tgz
+4. sudo apt install openjdk-8-jre-headless -y
 
-## Configure and run Apache Zookeeper nodes
+## Configure and run Apache Zookeeper on each instance
 
-## Configure and run Apache Kafka brokers
+
+## Configure and run Apache Kafka brokers on each instance
 
 ## Create custom producer class 
 
