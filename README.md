@@ -37,8 +37,8 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
    tickTime=2000 <br />
    #list of servers <br />
    server.1=0.0.0.0:2888:3888 <br />
-   server.2=<Ip of second server>:2888:3888 # AWS IPv4 Public IP <br />
-   server.3=<ip of third server>:2888:3888 # AWS IPv4 Public IP <br />
+   server.2=Ip of second server:2888:3888 # AWS IPv4 Public IP <br />
+   server.3=ip of third server:2888:3888 # AWS IPv4 Public IP <br />
   
    ### For Node 2
    dataDir=/home/ubuntu/kafka_2.12-2.5.0/data/zookeeper <br />
@@ -46,9 +46,9 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
    syncLimit=2 <br />
    tickTime=2000 <br />
    #list of servers <br />
-   server.1=<ip of first server>:2888:3888  <br />
+   server.1=ip of first server:2888:3888  <br />
    server.2=0.0.0.0:2888:3888 <br />
-   server.3=<ip of third server>:2888:3888 <br />
+   server.3=ip of third server:2888:3888 <br />
    
    ### For Node 3
    dataDir=/home/ubuntu/kafka_2.12-2.5.0/data/zookeeper <br />
@@ -56,8 +56,8 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
    syncLimit=2 <br />
    tickTime=2000 <br />
    #list of servers <br />
-   server.1=<ip of first server>:2888:3888 <br />
-   server.2=<ip of second server>:2888:3888 <br />
+   server.1=ip of first server:2888:3888 <br />
+   server.2=ip of second server:2888:3888 <br />
    server.3=0.0.0.0:2888:3888 <br />
 
 4. While in the kafka folder, run zookeeper as a background process using the following command: <br />
