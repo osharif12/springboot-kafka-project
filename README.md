@@ -11,8 +11,8 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
 
 2. Download the .pem file and launch the instance. Once launched you should be able to ssh into your instance using following commands: 
 
-chmod 400 name-of-pem.pem
-ssh -i "name-of-pem.pem" ubuntu@ec2-**-***-***-**.us-east-2.compute.amazonaws.com
+chmod 400 name-of-pem.pem  <br />
+ssh -i "name-of-pem.pem" ubuntu@ec2-!!-!!!-!!!-!!.us-east-2.compute.amazonaws.com
 
 ## Download proper binaries on each instance
 
