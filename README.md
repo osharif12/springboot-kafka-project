@@ -6,7 +6,7 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
 
 ### Steps
 1. Create an AWS account and launch three EC2 instances. The AMI for each instance should be Linux Ubuntu Server(16.04 LTS or above), instance type should be t2.medium, and security groups should be configured accordingly for each instance. 
-
+![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/security-groups.png "")
 2. 
 
 ## Download proper binaries on each instance
