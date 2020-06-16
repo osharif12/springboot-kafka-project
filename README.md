@@ -112,8 +112,8 @@ You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper
    
    ![alt text](https://github.com/osharif12/springboot-kafka-project/blob/master/src/main/resources/static/consumer.png "")
    
-## Overview
-You have now set up your own Kafka cluster. Below are links for further reference: <br />
+## Overview and References
+You have now set up your own Kafka cluster. Below are links for further references: <br />
 
 https://kafka.apache.org/quickstart <br />
 https://codeforgeek.com/how-to-setup-zookeeper-cluster-for-kafka/ <br />
