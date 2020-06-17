@@ -1,5 +1,5 @@
 # springboot-kafka-project
-This project demonstrates the basics of Apache Kafka and uses Zookeeper, AWS, and Springboot. I will outline how to create a cluster of multiple Kafka brokers and Zookeeper nodes on three AWS EC2 instances. I will also demonstrate how to use Spring Boot to create a custom Kafka producer to send records to the Kafka cluster with specified topic. 
+Apache Kafka is a popular distributed streaming platform used by many top companies. It can publish and subscribe to streams of records as well as store them in a durable, fault tolerant, and scalable way. It can also process streams of data in real time as they occur. This project demonstrates the basics of Apache Kafka and uses Zookeeper, AWS, and Springboot. I will outline how to create a cluster of multiple Kafka brokers and Zookeeper nodes on three AWS EC2 instances. I will also demonstrate how to use Spring Boot to create a custom Kafka producer to send records to the Kafka cluster with specified topic. 
 
 ## Configure AWS EC2 Instances
 You will create three EC2 instances on AWS. Eeach instance will host a Zookeeper node to manage the cluster and a Kafka broker to handle producers and consumers.
